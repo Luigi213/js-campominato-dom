@@ -67,6 +67,7 @@ button.addEventListener('click', function(){
                     this.classList.add('red');
                     grid.classList.add('blockEvents');
                     alert(`Mi dispiace, hai perso, il tuo punteggio è: ${counter}`);
+                    location.reload()
                 }
                 if(counter == 100 - bombs.length){
                     alert(`Congratulazioni, hai vinto, il tuo punteggio è: ${counter}`);
@@ -96,6 +97,7 @@ button.addEventListener('click', function(){
                     this.classList.add('red');
                     grid.classList.add('blockEvents');
                     alert(`Mi dispiace, hai perso, il tuo punteggio è: ${counter}`);
+                    location.reload()
                 }
                 if(counter == 81 - bombs.length){
                     alert(`Congratulazioni, hai vinto, il tuo punteggio è: ${counter}`);
@@ -124,6 +126,7 @@ button.addEventListener('click', function(){
                     this.classList.add('red');
                     grid.classList.add('blockEvents');
                     alert(`Mi dispiace, hai perso, il tuo punteggio è: ${counter}`);
+                    location.reload()
                 }
                 if(counter == 49 - bombs.length){
                     alert(`Congratulazioni, hai vinto, il tuo punteggio è: ${counter}`);
