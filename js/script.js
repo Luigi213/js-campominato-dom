@@ -1,10 +1,22 @@
+// js-campominato-grid
+
 //1- Creare bottone in html che al click genererà una griglia di gioco
 //2- Creare la griglia di gioco in js
 //2.1 ogni ha un numero progressivo, da 1 a 100, quindi 10 caselle per ognuna delle 10 righe
 //2.2 al click di una delle caselle si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
+
+// js-campominato-dom
+
+//1- Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe
+//1.1 usare un fuction con i relativi math
+//1.2 cassella solo una bomba, quindi non ci devono essere numeri uguali nell’array generato dal computer
+//1.3 cella si colora di rosso qualora avessimo preso il numero presente nell'array, quindi abbiamo preso
+//1.4 cella non appartenente ai numeri dell'array si va avanti
+//1.5 vince chi non prende nemmeno una cella in cui al suo interno ci sia un numero presente nell’array
+//2- Visuallizare il punteggio fatto a schermo, ossia il numero di volte che si ha cliccato sulla casella giusta
 function createSquare(num){
-    
     let elementSquare = document.createElement('div');
+    
     
     elementSquare.classList.add('square-easy');
     
@@ -40,9 +52,9 @@ button.addEventListener('click', function(){
         
         document.getElementById('grid').innerHTML="";
 
-        let bombs = createBombsArrey(1, 100)
+        let bombs = createBombsArrey(1, 100);
 
-        console.log(bombs)
+        let counter = 0;;
 
         for(let i=0; i<100; i++){
             const newElement = createSquare(i +1);
@@ -50,29 +62,28 @@ button.addEventListener('click', function(){
             grid.appendChild(newElement);
 
             newElement.addEventListener('click', function(){
-                this.classList.toggle('click')
+                this.classList.add('click');
                 if(bombs.includes(parseInt(this.innerText))){
                     this.classList.add('red');
                     grid.classList.add('blockEvents');
-                    alert('Hai perso')
+                    alert(`Mi dispiace, hai perso, il tuo punteggio è: ${counter}`);
                 }
-            });
-
-            let count = document.getElementById('point')
-            newElement.addEventListener('click', function(){
-
-            });
+                if(counter == 100 - bombs.length){
+                    alert(`Congratulazioni, hai vinto, il tuo punteggio è: ${counter}`);
+                }
+                counter++;
+            }, {once : true})
         }
+
     }
     else if(difficult === 'medium'){        
         let grid = document.getElementById('grid');
 
         document.getElementById('grid').innerHTML="";
 
-        let bombs = createBombsArrey(1, 81)
+        let bombs = createBombsArrey(1, 81);
 
-        console.log (bombs)
-
+        let counter = 0;
         
         for(let i=0; i<81; i++){
             const newElement = createSquareMedium(i +1);
@@ -80,14 +91,17 @@ button.addEventListener('click', function(){
             grid.appendChild(newElement);
             
             newElement.addEventListener('click', function(){
-                this.classList.toggle('click')
+                this.classList.add('click');
                 if(bombs.includes(parseInt(this.innerText))){
-                    this.classList.add('red')
+                    this.classList.add('red');
                     grid.classList.add('blockEvents');
-                    alert('Hai perso')
+                    alert(`Mi dispiace, hai perso, il tuo punteggio è: ${counter}`);
                 }
-                console.log(i + 1)
-            });
+                if(counter == 81 - bombs.length){
+                    alert(`Congratulazioni, hai vinto, il tuo punteggio è: ${counter}`);
+                }
+                counter++;
+            }, {once : true});
         }    
     }
     else{        
@@ -95,8 +109,9 @@ button.addEventListener('click', function(){
 
         document.getElementById('grid').innerHTML="";
 
-        let bombs = createBombsArrey(1, 49)
-        console.log (bombs)
+        let bombs = createBombsArrey(1, 49);
+        
+        let counter = 0;
         
         for(let i=0; i<49; i++){
             const newElement = createSquareHard(i +1);
@@ -104,14 +119,17 @@ button.addEventListener('click', function(){
             grid.appendChild(newElement);
             
             newElement.addEventListener('click', function(){
-                this.classList.toggle('click')
+                this.classList.add('click');
                 if(bombs.includes(parseInt(this.innerText))){
-                    this.classList.add('red')
+                    this.classList.add('red');
                     grid.classList.add('blockEvents');
-                    alert('Hai perso')
+                    alert(`Mi dispiace, hai perso, il tuo punteggio è: ${counter}`);
                 }
-                console.log(i + 1)
-            });
+                if(counter == 49 - bombs.length){
+                    alert(`Congratulazioni, hai vinto, il tuo punteggio è: ${counter}`);
+                }
+                counter++;
+            }, {once : true});
         }    
     }
 });
