@@ -17,14 +17,13 @@
 function createSquare(num){
     let elementSquare = document.createElement('div');
     
-    
     elementSquare.classList.add('square-easy');
     
     elementSquare.innerText = num;
     
-    
     return elementSquare;
 }
+
 function createSquareMedium(num){
     let elementSquare = document.createElement('div');
     
@@ -34,6 +33,7 @@ function createSquareMedium(num){
     
     return elementSquare;
 }
+
 function createSquareHard(num){
     let elementSquare = document.createElement('div');
 
