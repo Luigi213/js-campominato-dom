@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <div class="container-header">
+                <div class="row-header">
+                    <div class="col-header d-flex">
+                        <div>
+                            <h1>Campo minato</h1>
+                        </div>
+                        <div>
+                            <label for="stage">Difficoltà:</label>
+                            <select name="difficult" id="stage">
+                                <option value="easy">Easy</option>
+                                <option value="medium">Medium</option>
+                                <option value="hard">Hard</option>
+                            </select>
+                            <button id="btn" class="btn-play">play</button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container-main">
+                <div class="row-main">   
+                    <div class="col-main">
+                        <div id="grid" class="d-flex content-main">
+
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container-footer">
+                <div class="row-footer">
+                    <div class="col-footer d-flex">
+                        <p>Made with by <a href="#">Boolean</a></p>
+                    </div>
+                    <p id="point">0</p>
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript" src="./js/script.js"></script>
+    </body>
+</html>
