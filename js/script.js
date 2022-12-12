@@ -146,8 +146,8 @@ function createBombsArrey(min, max)
         let radomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
         if(!arrayBombBlackList.includes(radomNumber)){
             arrayBombBlackList.push(radomNumber)
+            i++;
         }
-        i++;
     }
     return arrayBombBlackList;
 } 
