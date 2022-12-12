@@ -53,10 +53,12 @@ button.addEventListener('click', function(){
                     alert(`Mi dispiace, hai perso, il tuo punteggio è: ${counter}`);
                     location.reload()
                 }
-                if(counter == 100 - bombs.length){
+                else if(counter == 100 - bombs.length){
                     alert(`Congratulazioni, hai vinto, il tuo punteggio è: ${counter}`);
                 }
-                counter++;
+                else{
+                    counter++;
+                }
             }, {once : true})
         }
 
@@ -87,10 +89,12 @@ button.addEventListener('click', function(){
                     alert(`Mi dispiace, hai perso, il tuo punteggio è: ${counter}`);
                     location.reload()
                 }
-                if(counter == 81 - bombs.length){
+                else if(counter == 81 - bombs.length){
                     alert(`Congratulazioni, hai vinto, il tuo punteggio è: ${counter}`);
                 }
-                counter++;
+                else{
+                    counter++;
+                }
             }, {once : true});
         }    
     }
@@ -122,10 +126,12 @@ button.addEventListener('click', function(){
                     alert(`Mi dispiace, hai perso, il tuo punteggio è: ${counter}`);
                     location.reload()
                 }
-                if(counter == 49 - bombs.length){
+                else if(counter == 49 - bombs.length){
                     alert(`Congratulazioni, hai vinto, il tuo punteggio è: ${counter}`);
                 }
-                counter++;
+                else{
+                    counter++;
+                }
             }, {once : true});
         }    
     }
