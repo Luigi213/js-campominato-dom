@@ -49,32 +49,10 @@
     height: 100%;
 }
 
-.square-hard{
+.square{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(100% / 7);
-    height: calc(100% / 7);
-    background-color: rgb(127, 255, 212);
-    border: 2px solid black;
-}
-
-.square-medium{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: calc(100% / 9);
-    height: calc(100% / 9);
-    background-color: rgb(127, 255, 212);
-    border: 2px solid black;
-}
-
-.square-easy{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: calc(100% / 10);
-    height: calc(100% / 10);
     background-color: rgb(127, 255, 212);
     border: 2px solid black;
 }

@@ -17,30 +17,10 @@
 function createSquare(num){
     let elementSquare = document.createElement('div');
     
-    elementSquare.classList.add('square-easy');
+    elementSquare.classList.add('square');
     
     elementSquare.innerText = num;
     
-    return elementSquare;
-}
-
-function createSquareMedium(num){
-    let elementSquare = document.createElement('div');
-    
-    elementSquare.classList.add('square-medium');
-    
-    elementSquare.innerText = num;
-    
-    return elementSquare;
-}
-
-function createSquareHard(num){
-    let elementSquare = document.createElement('div');
-
-    elementSquare.classList.add('square-hard');
-
-    elementSquare.innerText = num;
-
     return elementSquare;
 }
 
@@ -57,7 +37,11 @@ button.addEventListener('click', function(){
         let counter = 0;;
 
         for(let i=0; i<100; i++){
-            const newElement = createSquare(i +1);
+            let newElement = createSquare(i +1);
+
+            newElement.style.width = 'calc(100% / 10)';
+
+            newElement.style.height = 'calc(100% / 10)';
             
             grid.appendChild(newElement);
 
@@ -87,7 +71,11 @@ button.addEventListener('click', function(){
         let counter = 0;
         
         for(let i=0; i<81; i++){
-            const newElement = createSquareMedium(i +1);
+            let newElement = createSquare(i +1);
+
+            newElement.style.width = 'calc(100% / 9)';
+
+            newElement.style.height = 'calc(100% / 9)';
             
             grid.appendChild(newElement);
             
@@ -116,9 +104,15 @@ button.addEventListener('click', function(){
         let counter = 0;
         
         for(let i=0; i<49; i++){
-            const newElement = createSquareHard(i +1);
+            const newElement = createSquare(i +1);
+
+            newElement.style.width = 'calc(100% / 7)';
+
+            newElement.style.height = 'calc(100% / 7)';
             
             grid.appendChild(newElement);
+
+            console.log(newElement)
             
             newElement.addEventListener('click', function(){
                 this.classList.add('click');
