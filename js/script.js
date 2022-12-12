@@ -115,8 +115,6 @@ button.addEventListener('click', function(){
             newElement.style.height = 'calc(100% / 7)';
             
             grid.appendChild(newElement);
-
-            console.log(newElement)
             
             newElement.addEventListener('click', function(){
                 this.classList.add('click');
